@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Đại Thiên Vũ Trụ — Canon OS V3</title>
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="css/story-os-v3.css" />
+</head>
+
+<body>
+<div id="app">
+
+<header class="topbar">
+  <div class="brand">
+    🌌 <span>Đại Thiên Vũ Trụ</span>
+    <small>Canon OS V3</small>
+  </div>
+
+  <div class="topbar-actions">
+    <div class="mode-switch" role="tablist" aria-label="Chế độ">
+      <button id="modeCanon" class="mode-btn active" type="button">
+        📚 Canon
+      </button>
+
+      <button id="modeStory" class="mode-btn" type="button">
+        📖 Truyện
+      </button>
+
+      <button id="modeTimeline" class="mode-btn" type="button">
+        ⏳ Timeline
+      </button>
+
+      <button id="modeCouncil" class="mode-btn" type="button">
+        🤖 Council
+      </button>
+    </div>
+
+    <input
+      id="globalSearch"
+      type="text"
+      placeholder="Tìm kiếm toàn bộ Canon…"
+    />
+
+    <button id="btnExport" class="btn ghost">
+      Xuất Canon
+    </button>
+
+    <button id="btnImport" class="btn ghost">
+      Nhập Canon
+    </button>
+
+    <input
+      id="importFile"
+      type="file"
+      accept="application/json"
+      hidden
+    />
+
+    <button id="btnNew" class="btn primary">
+      + Mục mới
+    </button>
+  </div>
+</header>
+
+
+<section id="canonWorkspace" class="workspace canon-workspace">
+
+  <div class="layout">
+
+    <nav class="sidebar" id="sidebar"></nav>
+
+    <main class="content">
+
+      <div id="listView" class="list-view">
+
+        <div class="list-header">
+          <h2 id="listTitle">Tất cả</h2>
+          <span id="listCount" class="count-badge"></span>
+        </div>
+
+        <div id="entryList" class="entry-list"></div>
+
+      </div>
+
+    </main>
+
+    <aside id="detailPanel" class="detail-panel hidden">
+      <div class="detail-inner" id="detailInner"></div>
+    </aside>
+
+  </div>
+
+</section>
+
+
+<section
+  id="storyWorkspace"
+  class="workspace story-workspace hidden">
+</section>
+
+
+<section
+  id="timelineWorkspace"
+  class="workspace story-workspace hidden">
+</section>
+
+
+<section
+  id="councilWorkspace"
+  class="workspace story-workspace hidden">
+</section>
+
+</div>
+
+
+<div id="modalRoot"></div>
+
+
+<script src="js/schema.js"></script>
+<script src="js/db.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/app.js"></script>
+<script src="js/story-os-v3.js"></script>
+
+</body>
+</html>
